@@ -34,6 +34,11 @@ body {
   min-height: 3em;
 }
 
+.header-icon {
+  background-color: var(--bg-primary);
+  border: none;
+}
+
 .header-icon:first-child {
   margin-right: auto;
 }
