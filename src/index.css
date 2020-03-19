@@ -67,7 +67,7 @@ main {
 }
 
 .hero-banner {
-  min-height: calc(100vh - 12em);
+  min-height: calc(100vh - 6em);
   display: grid;
 }
 
@@ -98,7 +98,7 @@ main {
   height: 3.125em;
   margin-top: 2em;
   justify-self: center;
-  align-self: flex-end;
+  align-self: start;
 }
 
 .scroll-icon span{
