@@ -37,13 +37,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 #root {
-  max-width: 500px;
-  margin: 0 auto;
   padding: 0 1em;
   height: 100vh;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 4em auto 2em;
+  grid-template-rows: 2em auto auto;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .header {
@@ -61,10 +64,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-primary);
   border: none;
   padding: 0;
-}
-
-.header-icon:first-child {
-  margin-right: auto;
 }
 
 .hero-banner {
@@ -108,4 +107,130 @@ body::-webkit-scrollbar-thumb {
   width: 0;
   height: .25em;
   margin: .5em auto;
+}
+
+section:not(.hero-banner) {
+  margin: 4em 0;
+}
+
+.header-text {
+  color: var(--color-secondary);
+  font-size: 1.28em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.sub-text {
+  font-size: 1.142em;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: var(--color-tertiary);
+}
+
+.main-text {
+  /* font-size: var(--font-size); */  
+  line-height: 1.2em;
+}
+
+.main-text + .date {
+  font-size: .85em;
+  font-weight: 200;
+}
+
+.highlight-text {
+  color: var(--color-tertiary);
+  font-weight: bold;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+.works {
+  /* margin: .5em 0 2.5em 0; */
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+}
+
+.works > img {
+  max-width: 100%;
+  min-height: 15em;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset 0px -4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.info-text {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1em;
+}
+
+.info-text > .main-text {
+  grid-column: 1/3;
+}
+
+.external-link {
+  justify-self: end;
+}
+
+footer {
+  /* width: 100vw; */
+  background-color: var(--bg-secondary);
+  margin: 0 -1em;
+  padding: 2em 1em;
+}
+
+footer .site-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1em;
+  margin: 1em 0;
+}
+
+footer  a {
+  color: var(--color-primary);
+  line-height: .25em;
+}
+
+footer a:hover {
+  color: var(--color-tertiary);
+}
+
+footer .connect {
+  display: grid;
+  row-gap: 1em;
+  margin: 2em 0;
+}
+
+footer .wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .portfolio .header-text {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .header-icons {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .scroll-icon {
+    display: none;
+  }
 }
