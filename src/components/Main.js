@@ -196,7 +196,7 @@ export default () => {
     },
     {
       name: "certificates",
-      header: "What, where, when I studied",
+      header: "Learning milestones",
       subSection: [
         {
           subHeader: "Certificate of Achievement ",
