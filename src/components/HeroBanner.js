@@ -3,7 +3,16 @@ import { motion } from "framer-motion";
 import hero from "../img/svg/web-dev-banner.svg";
 
 export default () => (
-  <section className="hero-banner">
+  <motion.section 
+    initial={{ opacity: 0}}
+    animate={{
+        opacity: 1,
+        ease: "easeIn"
+    }}
+    transition={{
+        duration: 1.5
+    }}
+  className="hero-banner">
     <div className="hero-text">
       <p className="text-greet">Hi, I'm</p>
       <h1 className="text-name">Joseph Lao,</h1>
@@ -11,14 +20,16 @@ export default () => (
     </div>
     <motion.div
       initial={{
-        scale: 0.5,
-        opacity: 0
+        scale: 0.75,
+        y:100
       }}
       animate={{
         scale: 1,
-        opacity: 1,
-        duration: 5
+        y:0
       }}
+      transition={{
+        duration: .5
+        }}
       className="hero-img">
       <img src={hero} alt="web development"></img>
     </motion.div>
@@ -26,5 +37,5 @@ export default () => (
     <div className="scroll-icon">
       <span></span>
     </div>
-  </section>
+  </motion.section>
 );

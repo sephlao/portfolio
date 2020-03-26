@@ -54,6 +54,7 @@ const Works = ({ name, imgSrc, link, text, index }) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={link}
         >
           <svg
             width="25"

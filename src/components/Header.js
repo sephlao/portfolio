@@ -5,7 +5,8 @@ const HeaderIcons = ({ icon }) => (
     <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.9 }}
-    className="header-icon">
+    className="header-icon"
+    aria-label="change theme">
       <svg
         width="20"
         height="21"
