@@ -39,12 +39,12 @@ const Common = ({ name, header, subSection }) => {
   );
 };
 
-const Works = ({ name, imgSrc, link, text, index }) => {
+const Works = ({ name, imgSrc, link, text }) => {
   return (
     <motion.div
     whileHover={{ scale: 1.05 }}
     animate={{ duration: 0.3 }}
-    data-aos={`fade-${(index % 2) ? 'left' : 'right' }`}
+    data-aos="fade-in"
     className="works">
       <img src={imgSrc} alt="" />
       <div className="info-text">
@@ -127,7 +127,7 @@ const Portfolio = () => {
       className="portfolio" id="portfolio">
       <h3 className="header-text">Projects I worked on</h3>
       {works.map((w, i) => (
-        <Works {...w} index={i} key={i}/>
+        <Works {...w} key={i}/>
       ))}
     </section>
   );
