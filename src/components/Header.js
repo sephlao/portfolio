@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+const storedTheme = localStorage.getItem("theme");
 
-const HeaderIcons = ({ icon }) => {
-  const storedTheme = localStorage.getItem("theme");
-  const [theme, setTheme] = useState(!storedTheme ? 'dark' : 'light');
-  document.body.className = theme ? theme : "dark";
+const HeaderIcons = () => {
+  let defaultTheme = new Date().getHours() > 19 ? 'dark' : 'light';
+  if (storedTheme) defaultTheme = storedTheme;
+  const [theme, setTheme] = useState(defaultTheme);
+  document.body.className = theme;
   const toggleTheme = () => {
     let currentTheme = theme === "dark" ? "light" : "dark";
     setTheme(currentTheme);

@@ -35,7 +35,7 @@ body {
   font-weight: var(--font-weight);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 350ms ease-in-out, color 300ms ease-in;
+  transition: background 350ms ease-in, color 300ms ease-in;
 }
 
 body::-webkit-scrollbar {
@@ -76,10 +76,12 @@ main {
 }
 
 .header-icon {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   border: none;
   padding: 0;
-  transition: background 350ms ease-in-out;
+  transition: background 350ms ease-in;
+  border-radius: 50%;
+  padding: .25em;
 }
 
 .header-icon > svg {
