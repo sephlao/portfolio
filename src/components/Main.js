@@ -124,7 +124,7 @@ const Portfolio = () => {
   ];
   return (
     <section
-      className="portfolio">
+      className="portfolio" id="portfolio">
       <h3 className="header-text">Projects I worked on</h3>
       {works.map((w, i) => (
         <Works {...w} index={i} key={i}/>
