@@ -92,6 +92,7 @@ main {
 .hero-banner {
   min-height: calc(100vh - 6em);
   display: grid;
+  align-items: center;
 }
 
 .text-name {
