@@ -65,12 +65,12 @@ const Works = ({ name, imgSrc, link, text, index }) => {
           >
             <path
               d="M19.144 5.14856L19.851 5.85606L12.356 13.3511L11.649 12.6441L19.144 5.14856Z"
-              fill="#F8F8FF"
+              fill="var(--color-primary)"
             />
-            <path d="M20 10H19V6H15V5H20V10Z" fill="#F8F8FF" />
+            <path d="M20 10H19V6H15V5H20V10Z" fill="var(--color-primary)" />
             <path
               d="M17.5 19H7.5C6.65 19 6 18.35 6 17.5V7.5C6 6.65 6.65 6 7.5 6H13V7H7.5C7.2 7 7 7.2 7 7.5V17.5C7 17.8 7.2 18 7.5 18H17.5C17.8 18 18 17.8 18 17.5V12H19V17.5C19 18.35 18.35 19 17.5 19Z"
-              fill="#F8F8FF"
+              fill="var(--color-primary)"
             />
           </svg>
         </a>
