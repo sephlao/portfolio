@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion';
 import HeroBanner from "./HeroBanner";
 import aca from "../img/portfolio/aca.png";
 import ia from "../img/portfolio/ia.png";
@@ -9,7 +10,7 @@ import drnancyrosen from "../img/portfolio/drnancyrosen.png";
 
 const Overview = () => {
   return (
-    <section className="overview" id="overview">
+    <section data-aos="fade-up" className="overview" id="overview">
       <h3 className="header-text">A brief of what I do</h3>
       <p className="main-text">
         I’m a <span className="highlight-text">Web Developer</span> with 4 years
@@ -25,7 +26,7 @@ const Overview = () => {
 
 const Common = ({ name, header, subSection }) => {
   return (
-    <section className={name} id={name}>
+    <section data-aos="fade-up" className={name} id={name}>
       <h3 className="header-text">{header}</h3>
       {subSection.map(({ subHeader, text, date }, i) => (
         <div key={i} style={{ marginBottom: "1.5em" }}>
@@ -38,9 +39,13 @@ const Common = ({ name, header, subSection }) => {
   );
 };
 
-const Works = ({ name, imgSrc, link, text }) => {
+const Works = ({ name, imgSrc, link, text, index }) => {
   return (
-    <div className="works">
+    <motion.div
+    whileHover={{ scale: 1.05 }}
+    animate={{ duration: 0.3 }}
+    data-aos={`fade-${(index % 2) ? 'left' : 'right' }`}
+    className="works">
       <img src={imgSrc} alt="" />
       <div className="info-text">
         <p className="sub-text">{name}</p>
@@ -70,7 +75,7 @@ const Works = ({ name, imgSrc, link, text }) => {
         </a>
         <p className="main-text">{text}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -117,10 +122,11 @@ const Portfolio = () => {
     }
   ];
   return (
-    <section className="portfolio">
+    <section
+      className="portfolio">
       <h3 className="header-text">Projects I worked on</h3>
       {works.map((w, i) => (
-        <Works {...w} key={i}/>
+        <Works {...w} index={i} key={i}/>
       ))}
     </section>
   );

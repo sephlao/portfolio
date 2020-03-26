@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AOS from 'aos';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
@@ -16,6 +17,13 @@ const App = () => {
     </>
   );
 }
+
+AOS.init({
+  offset: 200,
+  duration: 500,
+  easing: 'ease-in-sine',
+  delay: 100,
+});
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

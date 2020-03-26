@@ -1,8 +1,11 @@
 import React from "react";
-
+import { motion } from 'framer-motion';
 const HeaderIcons = ({ icon }) => (
   <div className="header-icons">
-    <button className="header-icon">
+    <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.9 }}
+    className="header-icon">
       <svg
         width="20"
         height="21"
@@ -15,12 +18,12 @@ const HeaderIcons = ({ icon }) => (
           fill="#F9F871"
         />
       </svg>
-    </button>
+    </motion.button>
   </div>
 );
 
 export default () => (
   <header className="header">
-    {/* <HeaderIcons /> */}
+    <HeaderIcons />
   </header>
 );
